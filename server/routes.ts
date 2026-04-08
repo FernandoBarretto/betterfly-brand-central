@@ -61,12 +61,8 @@ function requireApiKey(req: Request, res: Response, next: NextFunction) {
   next();
 }
 
-const rawKey = process.env.ANTHROPIC_API_KEY || "";
-const cleanKey = rawKey.trim().replace(/^["']|["']$/g, "");
-console.log(`[Anthropic] Key length: ${cleanKey.length}, starts: ${cleanKey.slice(0, 12)}..., ends: ...${cleanKey.slice(-6)}`);
-
 const anthropic = new Anthropic({
-  apiKey: cleanKey,
+  apiKey: (process.env.ANTHROPIC_API_KEY || "").trim(),
 });
 
 function requirePasscode(req: Request, res: Response, next: NextFunction) {
