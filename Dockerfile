@@ -23,6 +23,10 @@ COPY --from=base /app/dist ./dist
 COPY --from=base /app/node_modules ./node_modules
 COPY --from=base /app/package.json ./
 
+# Copy data files (brand guidelines, trends, competitors, etc.)
+COPY --from=base /app/data ./data
+COPY --from=base /app/server/data ./server/data
+
 EXPOSE 3000
 ENV PORT=3000
 ENV NODE_ENV=production
