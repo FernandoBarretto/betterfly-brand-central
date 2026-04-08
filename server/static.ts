@@ -5,9 +5,10 @@ import path from "path";
 export function serveStatic(app: Express) {
   const distPath = path.resolve(__dirname, "public");
   if (!fs.existsSync(distPath)) {
-    throw new Error(
-      `Could not find the build directory: ${distPath}, make sure to build the client first`,
+    console.log(
+      `Client build directory not found at ${distPath} — running in API-only mode (Vercel serves the frontend)`,
     );
+    return;
   }
 
   app.use(express.static(distPath));
