@@ -1,0 +1,70 @@
+/* ============================================================
+   Aura DS — Semantic Token Layer for Brand Central
+   Maps token names → resolved hex values
+   Usage: var(--color-surface-default), etc.
+   ============================================================ */
+
+:root {
+  /* ── Surfaces ─────────────────────────────────────────── */
+  --color-surface-default:          #F7F5EB;  /* neutral-100 */
+  --color-surface-raised:           #FFFFFF;
+  --color-surface-sunken:           #DFDFD8;  /* neutral-300 */
+  --color-surface-disabled:         #EBE9E1;  /* neutral-200 */
+  --color-surface-selected:         #E2F9EC;  /* green-100 */
+  --color-surface-inverse:          #042914;  /* green-950 — dark section bg */
+  --color-surface-dark-mid:         #123726;  /* forest-900 — dark card gradient start */
+  --color-surface-dark-alt:         #0F1C14;  /* forest-950 — dark card gradient end */
+
+  /* ── Text ─────────────────────────────────────────────── */
+  --color-text-primary:             #1D1D1B;  /* neutral-950 */
+  --color-text-secondary:           #504E49;  /* neutral-800 */
+  --color-text-tertiary:            #929087;  /* neutral-600 */
+  --color-text-disabled:            #B4B2AC;  /* neutral-500 */
+  --color-text-inverse:             #FFFFFF;
+  --color-text-inverse-subtle:      rgba(255,255,255,0.60);
+  --color-text-link:                #0E8D45;  /* green-700 */
+  --color-text-link-dark:           #4DEE93;  /* green-400 */
+  --color-text-accent:              #17E871;  /* green-500 */
+
+  /* ── Borders ──────────────────────────────────────────── */
+  --color-border-default:           #D4D2CB;  /* neutral-400 */
+  --color-border-hover:             #B4B2AC;  /* neutral-500 */
+  --color-border-subtle:            #EBE9E1;  /* neutral-200 */
+  --color-border-focus:             #4DEE93;  /* green-400 */
+  --color-border-error:             #D40404;  /* red-600 */
+
+  /* ── Interactive — Primary (green) ───────────────────── */
+  --color-interactive-primary:      #042914;  /* green-950 */
+  --color-interactive-primary-on:   #17E871;  /* green-500 text on dark bg */
+  --color-interactive-primary-cta:  #4DEE93;  /* green-400 — bright CTA */
+
+  /* ── Interactive — Secondary (teal) ──────────────────── */
+  --color-interactive-secondary:    #5FFFF3;  /* teal-400 */
+  --color-interactive-secondary-on: #042914;  /* green-950 text on teal */
+
+  /* ── Status ───────────────────────────────────────────── */
+  --color-status-success:           #047857;  /* emerald-700 */
+  --color-status-success-surface:   #F0FAF5;
+  --color-status-error:             #D40404;  /* red-600 */
+  --color-status-error-surface:     #FBF0F0;
+  --color-status-warning:           #B46B00;  /* amber-700 */
+  --color-status-info:              #00AFA2;  /* teal-700 */
+
+  /* ── Typography ───────────────────────────────────────── */
+  --font-display:  'Alumni Sans', sans-serif;
+  --font-body:     'Inter', system-ui, sans-serif;
+
+  /* ── Motion ───────────────────────────────────────────── */
+  --duration-fast:    100ms;
+  --duration-normal:  200ms;
+  --duration-slow:    300ms;
+  --duration-x-slow:  500ms;
+  --ease-out:   cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Spacing aliases ──────────────────────────────────── */
+  --space-card:   20px;   /* paddingCard */
+  --space-modal:  24px;   /* paddingModal */
+  --radius-card:  20px;   /* radiusLg — standard cards */
+  --radius-btn:   9999px; /* radiusFull — buttons/pills */
+}

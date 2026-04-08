@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales Battle Cards — Betterfly vs. Competitors</title>
+<style>
+  :root {
+    --betterfly-green: #00C853;
+    --betterfly-dark: #0A1F0A;
+    --yulife-purple: #6B21A8;
+    --beam-navy: #1E3A5F;
+    --nayya-dark: #1A2744;
+    --selerix-green: #166534;
+    --nava-red: #991B1B;
+    --aetna-darkred: #7F1D1D;
+    --card-bg: #FFFFFF;
+    --page-bg: #F1F5F9;
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --border: #E2E8F0;
+    --alert-bg: #FFF7ED;
+    --alert-border: #F97316;
+    --hear-bg: #FEF9C3;
+    --say-bg: #F0FDF4;
+    --weakness-bg: #FFF1F2;
+    --proof-bg: #F0FDF4;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--page-bg);
+    color: var(--text-main);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: var(--betterfly-dark);
+    color: white;
+    padding: 60px 40px 50px;
+    text-align: center;
+  }
+  .cover .badge {
+    display: inline-block;
+    background: rgba(0,200,83,0.15);
+    border: 1px solid var(--betterfly-green);
+    color: var(--betterfly-green);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .cover h1 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+  .cover h1 span { color: var(--betterfly-green); }
+  .cover p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    margin: 0 auto 28px;
+  }
+  .cover-meta {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cover-meta span {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.75);
+    font-size: 12px;
+    padding: 5px 14px;
+    border-radius: 20px;
+  }
+
+  /* ── NAV ── */
+  .nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-bar::-webkit-scrollbar { display: none; }
+  .nav-bar a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 12px 14px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+  }
+  .nav-bar a:hover { color: var(--text-main); }
+  .nav-bar a .dot {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .nav-bar a[href="#yulife"] .dot { background: var(--yulife-purple); }
+  .nav-bar a[href="#yulife"]:hover { color: var(--yulife-purple); border-bottom-color: var(--yulife-purple); }
+  .nav-bar a[href="#beam"] .dot { background: var(--beam-navy); }
+  .nav-bar a[href="#beam"]:hover { color: var(--beam-navy); border-bottom-color: var(--beam-navy); }
+  .nav-bar a[href="#nayya"] .dot { background: var(--nayya-dark); }
+  .nav-bar a[href="#nayya"]:hover { color: var(--nayya-dark); border-bottom-color: var(--nayya-dark); }
+  .nav-bar a[href="#selerix"] .dot { background: var(--selerix-green); }
+  .nav-bar a[href="#selerix"]:hover { color: var(--selerix-green); border-bottom-color: var(--selerix-green); }
+  .nav-bar a[href="#nava"] .dot { background: var(--nava-red); }
+  .nav-bar a[href="#nava"]:hover { color: var(--nava-red); border-bottom-color: var(--nava-red); }
+  .nav-bar a[href="#aetna"] .dot { background: var(--aetna-darkred); }
+  .nav-bar a[href="#aetna"]:hover { color: var(--aetna-darkred); border-bottom-color: var(--aetna-darkred); }
+
+  /* ── MAIN LAYOUT ── */
+  .main { max-width: 960px; margin: 0 auto; padding: 40px 20px 80px; }
+
+  /* ── CARD ── */
+  .card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04);
+    margin-bottom: 48px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .card-header {
+    padding: 24px 28px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .card-header-left { display: flex; align-items: center; gap: 14px; }
+  .card-logo {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; font-weight: 800; color: white;
+    flex-shrink: 0;
+  }
+  .card-title h2 { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .card-title p { font-size: 13px; color: var(--text-muted); }
+  .card-meta { text-align: right; font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+  .card-meta strong { display: block; font-size: 13px; color: var(--text-main); }
+
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .tag {
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.5px;
+    text-transform: uppercase; padding: 3px 9px;
+    border-radius: 20px; border: 1px solid;
+  }
+
+  /* ── ALERT ── */
+  .alert {
+    background: var(--alert-bg);
+    border-left: 4px solid var(--alert-border);
+    padding: 12px 18px;
+    margin: 0 28px 20px;
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  .alert strong { color: #C2410C; }
+
+  /* ── SNAPSHOT GRID ── */
+  .snapshot {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin: 0 28px 24px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .snapshot-cell {
+    background: white;
+    padding: 14px 16px;
+  }
+  .snapshot-cell .label {
+    font-size: 9.5px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .snapshot-cell .value { font-size: 13px; font-weight: 600; color: var(--text-main); line-height: 1.4; }
+
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--text-muted);
+    padding: 0 28px 10px;
+  }
+
+  /* ── TABLES ── */
+  .table-wrap { padding: 0 28px 24px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th {
+    background: #F8FAFC;
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.8px;
+    text-transform: uppercase; color: var(--text-muted);
+    padding: 10px 14px; text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 13px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.55;
+  }
+  tr:last-child td { border-bottom: none; }
+  td:first-child { font-weight: 600; width: 34%; }
+
+  /* ── QUICK-FIRE ── */
+  .quickfire { padding: 0 28px 24px; }
+  .qf-row {
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 12px;
+    margin-bottom: 10px;
+    align-items: start;
+  }
+  .qf-hear {
+    background: var(--hear-bg);
+    border: 1px solid #FDE68A;
+    border-radius: 8px;
+    padding: 11px 14px;
+  }
+  .qf-say {
+    background: var(--say-bg);
+    border: 1px solid #BBF7D0;
+    border-radius: 8px;
+    padding: 11px 14px;
+  }
+  .qf-badge {
+    display: inline-block;
+    font-size: 9px; font-weight: 800; letter-spacing: 1px;
+    text-transform: uppercase; padding: 2px 7px;
+    border-radius: 4px; margin-bottom: 5px;
+  }
+  .qf-hear .qf-badge { background: #FEF08A; color: #854D0E; }
+  .qf-say .qf-badge { background: #BBF7D0; color: #14532D; }
+  .qf-hear p, .qf-say p { font-size: 13px; line-height: 1.5; }
+
+  /* ── WEAKNESS + PROOF ── */
+  .bottom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 0 28px 24px; }
+  .weakness-box, .proof-box { border-radius: 10px; padding: 16px 18px; }
+  .weakness-box { background: var(--weakness-bg); border: 1px solid #FECDD3; }
+  .proof-box { background: var(--proof-bg); border: 1px solid #BBF7D0; }
+  .box-title {
+    font-size: 10px; font-weight: 800; letter-spacing: 1px;
+    text-transform: uppercase; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .weakness-box .box-title { color: #BE123C; }
+  .proof-box .box-title { color: #15803D; }
+  .weakness-item, .proof-item {
+    font-size: 12.5px; padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    line-height: 1.5;
+  }
+  .weakness-item:last-child, .proof-item:last-child { border-bottom: none; }
+  .weakness-item strong, .proof-item strong { display: block; font-size: 12px; margin-bottom: 2px; }
+
+  /* ── CLOSING QUESTION ── */
+  .closing {
+    margin: 0 28px 28px;
+    background: linear-gradient(135deg, #F0FDF4, #DCFCE7);
+    border: 1px solid #86EFAC;
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
+  .closing .closing-label {
+    font-size: 9.5px; font-weight: 800; letter-spacing: 1.5px;
+    text-transform: uppercase; color: #15803D; margin-bottom: 7px;
+  }
+  .closing p { font-size: 14px; font-style: italic; color: #14532D; line-height: 1.6; font-weight: 500; }
+
+  /* ── DIVIDER ── */
+  .divider { height: 1px; background: var(--border); margin: 0 28px 20px; }
+
+  /* ── PRINT ── */
+  @media print {
+    .nav-bar, .cover { display: none; }
+    .card { box-shadow: none; page-break-after: always; border: 1px solid #ccc; }
+    .main { padding: 0; }
+    body { background: white; }
+  }
+
+  @media (max-width: 640px) {
+    .snapshot { grid-template-columns: repeat(2, 1fr); }
+    .bottom-grid { grid-template-columns: 1fr; }
+    .qf-row { grid-template-columns: 1fr; }
+    .card-header { flex-direction: column; }
+    .card-meta { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="badge">Internal Sales Enablement</div>
+  <h1>Sales Battle Cards</h1>
+  <p>Competitive intelligence and objection-handling scripts for broker conversations — 6 competitors, powered by <span style="color:var(--betterfly-green);font-weight:700;">Betterfly</span>.</p>
+  <div class="cover-meta">
+    <span>📅 March 2026</span>
+    <span>🎯 6 Competitors</span>
+    <span>💬 Broker Objections</span>
+    <span>🔒 Internal Use Only</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav-bar">
+  <a href="#yulife"><span class="dot"></span> YuLife</a>
+  <a href="#beam"><span class="dot"></span> Beam Benefits</a>
+  <a href="#nayya"><span class="dot"></span> Nayya</a>
+  <a href="#selerix"><span class="dot"></span> Selerix</a>
+  <a href="#nava"><span class="dot"></span> Nava Benefits</a>
+  <a href="#aetna"><span class="dot"></span> Aetna Wellness</a>
+</nav>
+
+<div class="main">
+
+<!-- ════════════════════════════════════════════
+     CARD 1: YULIFE
+════════════════════════════════════════════ -->
+<div class="card" id="yulife">
+  <div class="card-header">
+    <div class="card-header-left">
+      <div class="card-logo" style="background:var(--yulife-purple);">YU</div>
+      <div class="card-title">
+        <h2>YuLife</h2>
+        <p>Gamified group life &amp; wellness — UK-origin, US expansion</p>
+        <div class="tags">
+          <span class="tag" style="color:var(--yulife-purple);border-color:var(--yulife-purple);background:#F5F3FF;">B2B</span>
+          <span class="tag" style="color:#B45309;border-color:#FDE68A;background:#FFFBEB;">UK-Origin</span>
+          <span class="tag" style="color:#065F46;border-color:#A7F3D0;background:#ECFDF5;">Wellness</span>
+          <span class="tag" style="color:#1D4ED8;border-color:#BFDBFE;background:#EFF6FF;">Gamification</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-meta">
+      <strong>Founded 2016, London</strong>
+      Raised: $206M+<br>
+      Markets: UK, US, Japan, SA<br>
+      <span style="color:#D97706;font-weight:600;">⚠ Zero active Meta ads (Mar 2025)</span>
+    </div>
+  </div>
+
+  <div class="alert">
+    <strong>Key Intel:</strong> YuLife runs <strong>zero active paid ads on Meta</strong> (confirmed via Ad Library, March 2025). All paid media is LinkedIn-only, targeting HR buyers. They have no US-specific creative and no consumer/employee-direct advertising. Their US expansion is real but early-stage.
+  </div>
+
+  <p class="section-label">SNAPSHOT</p>
+  <div class="snapshot">
+    <div class="snapshot-cell"><div class="label">Core Claim</div><div class="value">"Insurance that inspires life" — daily gamified wellness earns YuCoin rewards</div></div>
+    <div class="snapshot-cell"><div class="label">Primary Buyer</div><div class="value">HR Directors &amp; CPOs at 500–10,000 employee companies</div></div>
+    <div class="snapshot-cell"><div class="label">Differentiator</div><div class="value">Gamification + YuCoin reward currency redeemable at Amazon, Nike, ASOS</div></div>
+    <div class="snapshot-cell"><div class="label">US Weakness</div><div class="value">No US broker relationships, no US-specific creative, no consumer brand awareness</div></div>
+  </div>
+
+  <p class="section-label">BROKER OBJECTIONS &amp; RESPONSES</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>What the Broker Says</th><th>How to Respond</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>"YuLife looks really innovative — gamification is something our clients are excited about."</td>
+          <td>Acknowledge it fully. Then reframe: "Gamification is a brilliant engagement mechanic — and it works as a wellness overlay. The question for your client is what sits underneath it. YuLife is not a comprehensive health and insurance platform. We are. Our platform connects daily healthy habits to real insurance outcomes — including the ability to increase life insurance coverage by staying active. It's not just about earning gift cards; it's about building real, long-term protection."</td>
+        </tr>
+        <tr>
+          <td>"They claim employees generate 3× the average engagement. That's a compelling ROI story."</td>
+          <td>"That stat comes from their own platform data — it measures app engagement, not health outcomes or claims reduction. Our data flywheel captures 3,000+ variables per user across five stages, including actual insurance claims data. We can answer the question no wellness app can: which behaviors reduce claims 6–12 months ahead of time? That's the ROI story your clients' CFOs can verify."</td>
+        </tr>
+        <tr>
+          <td>"Their pricing is competitive. How do you stack up?"</td>
+          <td>"It's worth clarifying what you're comparing. YuLife is a wellness engagement tool with a life insurance wrapper. We are a Health &amp; Insurance Operating System. These aren't the same category. Our platform connects the member, the broker, the employer, and the insurer in a single, unified ecosystem. Let's map out what your client actually needs, and then we can talk price in context."</td>
+        </tr>
+        <tr>
+          <td>"They're a B Corp. Our clients care about purpose-driven vendors."</td>
+          <td>"B Corp certification is a genuine achievement — and so is ours. We are also a certified B Corp and a Public Benefit Corporation. Our purpose is expressed through our platform: every healthy action a member takes earns Betterflies that can unlock real financial protection. We believe that making people healthier and more protected is the highest form of purpose in this industry."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-label">QUICK-FIRE: WHEN YOU HEAR X, SAY Y</p>
+  <div class="quickfire">
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"YuCoin" or "rewards for steps"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"YuCoin unlocks retail discounts. Our Betterfly currency unlocks something more powerful: increased life insurance coverage. Your client's employees can literally earn more protection by staying healthy. That's a fundamentally different value proposition."</p></div>
+    </div>
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"They're expanding into the US"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"They announced US expansion, but as of March 2025 they have no US-specific ad creative, no US broker network, and no US market track record. We are launching in the US in 2026 with a platform already battle-tested across LATAM and Spain. Your client would be an early adopter in a new market with them. With us, they get a mature platform from day one."</p></div>
+    </div>
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"The 'YuLife Unplugged' podcast / thought leadership"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"Great content marketing — it targets HR leaders with leadership themes, not benefits buyers. Ask them what their onboarding and support model looks like for a US employer. That's where the experience gap shows up."</p></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="bottom-grid">
+    <div class="weakness-box">
+      <div class="box-title">⚠ Their Structural Weaknesses</div>
+      <div class="weakness-item"><strong>US Market Newcomer</strong>No established US broker relationships, no US regulatory track record, no US-specific product design.</div>
+      <div class="weakness-item"><strong>Wellness Niche Only</strong>A wellness overlay, not a core health &amp; insurance platform. "Nice-to-have" not "must-have" in a budget crunch.</div>
+      <div class="weakness-item"><strong>Rewards Without Real Protection</strong>YuCoin unlocks retail discounts. Betterfly's rewards can increase actual insurance coverage — a fundamentally different model.</div>
+    </div>
+    <div class="proof-box">
+      <div class="box-title">✅ Your Betterfly Proof Points</div>
+      <div class="proof-item"><strong>Health &amp; Insurance OS</strong>We connect daily behaviors to real insurance outcomes. Members can earn increased life insurance coverage by staying active — not just gift cards.</div>
+      <div class="proof-item"><strong>Proven Scale, Strategic US Entry</strong>Scaled across LATAM and Spain. Our 2026 US launch brings a mature, battle-tested platform — not an experiment.</div>
+      <div class="proof-item"><strong>Also a Certified B Corp</strong>We share their commitment to purpose. Ours is expressed through the platform itself: healthier people, better protected lives.</div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <div class="closing-label">Recommended Closing Question</div>
+    <p>"If you could show your client not just how their employees are <em>engaging</em> with wellness, but how that engagement is actively <em>reducing their insurance risk</em> and <em>unlocking more coverage</em>, would that be a more powerful conversation to have?"</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CARD 2: BEAM BENEFITS
+════════════════════════════════════════════ -->
+<div class="card" id="beam">
+  <div class="card-header">
+    <div class="card-header-left">
+      <div class="card-logo" style="background:var(--beam-navy);">BM</div>
+      <div class="card-title">
+        <h2>Beam Benefits</h2>
+        <p>Dental-origin voluntary benefits carrier — "Benefits Simplified"</p>
+        <div class="tags">
+          <span class="tag" style="color:var(--beam-navy);border-color:#BFDBFE;background:#EFF6FF;">Carrier</span>
+          <span class="tag" style="color:#B45309;border-color:#FDE68A;background:#FFFBEB;">Dental-First</span>
+          <span class="tag" style="color:#065F46;border-color:#A7F3D0;background:#ECFDF5;">SMB–Mid-Market</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-meta">
+      <strong>Founded 2012, Columbus OH</strong>
+      Raised: $160M+<br>
+      Markets: US<br>
+      <span style="color:#DC2626;font-weight:600;">🚨 Perks programme sunset May 2025</span>
+    </div>
+  </div>
+
+  <div class="alert">
+    <strong>Key Intel:</strong> Beam's signature "Perks" smart toothbrush programme — their primary wellness differentiator — was <strong>sunset in May 2025 due to only 4% member enrollment</strong>. They are now repositioning around "Benefits Simplified" without a clear engagement differentiator. This is a live strategic vulnerability.
+  </div>
+
+  <p class="section-label">SNAPSHOT</p>
+  <div class="snapshot">
+    <div class="snapshot-cell"><div class="label">Core Claim</div><div class="value">"Benefits Simplified" — streamlined dental, vision, disability &amp; life for SMBs</div></div>
+    <div class="snapshot-cell"><div class="label">Primary Buyer</div><div class="value">Employee benefits brokers recommending carriers to SMB employers (50–1,000 employees)</div></div>
+    <div class="snapshot-cell"><div class="label">Differentiator</div><div class="value">Simplified enrollment via BeamElect; 2-year rate guarantees; broker-friendly tools</div></div>
+    <div class="snapshot-cell"><div class="label">Key Weakness</div><div class="value">Carrier-first, not platform-first. Clients locked into Beam's ecosystem. Perks programme gone.</div></div>
+  </div>
+
+  <p class="section-label">BROKER OBJECTIONS &amp; RESPONSES</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>What the Broker Says</th><th>How to Respond</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>"Beam has a great reputation with brokers. Why should I consider something new?"</td>
+          <td>"Beam has built strong broker relationships and we respect that. The key difference is this: Beam is a carrier that built a platform to sell its own products. We are a technology company that built a Health &amp; Insurance Operating System to work with <em>all</em> carriers. Our platform is a neutral, intelligent layer that enhances your existing carrier relationships — including Beam — giving you the freedom of choice without being locked into a single provider's ecosystem."</td>
+        </tr>
+        <tr>
+          <td>"Their 'Benefits Revolution' campaign is pretty compelling."</td>
+          <td>"The revolution we're leading is different: it's about shifting insurance from reactive to proactive. Beam simplifies the admin of traditional benefits. We connect daily healthy behaviors to real insurance outcomes. That's not a revolution in paperwork — it's a revolution in the fundamental model of how insurance works."</td>
+        </tr>
+        <tr>
+          <td>"They offer 2-year rate guarantees. That's very attractive to my clients."</td>
+          <td>"Rate guarantees are a static solution to a dynamic problem. We offer something more powerful: continuous intelligence. Our platform provides real-time data on how your client's population is engaging with their health, allowing you to have proactive conversations about risk and cost. A 2-year lock-in is valuable today; a platform that actively lowers your client's risk profile is valuable for the next decade."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-label">QUICK-FIRE: WHEN YOU HEAR X, SAY Y</p>
+  <div class="quickfire">
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"Beam Perks" or "smart toothbrush"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"That programme was sunset in May 2025 due to only 4% enrollment. It's a great case study in why wellness gimmicks don't last. Our model is fundamentally different — we connect healthy habits to real insurance value, not a free toothbrush."</p></div>
+    </div>
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"Benefits simplified"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"We agree — benefits should be simple. But simple administration is the floor, not the ceiling. We provide a platform that is simple to administer <em>and</em> actively engages employees every day, generating data that helps you and your client make smarter decisions."</p></div>
+    </div>
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"They're a Deloitte Technology Fast 500 company"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"Fast growth is great. The question is what they're growing into. Their technology is tied to their insurance products. Our technology is independent and carrier-agnostic. You get the best of both worlds: cutting-edge technology and the freedom to choose the best carriers for your clients."</p></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="bottom-grid">
+    <div class="weakness-box">
+      <div class="box-title">⚠ Their Structural Weaknesses</div>
+      <div class="weakness-item"><strong>Carrier, Not a Platform</strong>Their technology exists to sell their insurance products, not to be a neutral, carrier-agnostic solution.</div>
+      <div class="weakness-item"><strong>Post-Perks Identity Crisis</strong>Their signature differentiator (smart toothbrush) was sunset in May 2025 with only 4% enrollment. No clear engagement story remains.</div>
+      <div class="weakness-item"><strong>Static Rate Lock vs. Dynamic Intelligence</strong>2-year rate guarantees lock clients in; they provide no tools to actively manage or reduce population risk.</div>
+    </div>
+    <div class="proof-box">
+      <div class="box-title">✅ Your Betterfly Proof Points</div>
+      <div class="proof-item"><strong>Platform-First, Not Carrier-First</strong>We are a neutral Health &amp; Insurance OS that works with all carriers, giving brokers and clients true freedom of choice.</div>
+      <div class="proof-item"><strong>Wellness That Pays (Literally)</strong>Our Betterfly currency can unlock increased life insurance coverage — not a toothbrush. It's a new economic model for insurance.</div>
+      <div class="proof-item"><strong>Continuous Intelligence</strong>Real-time behavioral data and risk signals allow proactive conversations — not just a locked-in renewal price.</div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <div class="closing-label">Recommended Closing Question</div>
+    <p>"Would your clients find more long-term value in a 2-year rate lock from a single carrier, or in a dynamic platform that gives them the flexibility to choose the best carriers every year, while also providing the tools to actively lower their population's risk?"</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CARD 3: NAYYA
+════════════════════════════════════════════ -->
+<div class="card" id="nayya">
+  <div class="card-header">
+    <div class="card-header-left">
+      <div class="card-logo" style="background:var(--nayya-dark);">NY</div>
+      <div class="card-title">
+        <h2>Nayya</h2>
+        <p>AI-powered benefits guidance &amp; decision support platform</p>
+        <div class="tags">
+          <span class="tag" style="color:var(--nayya-dark);border-color:#C7D2FE;background:#EEF2FF;">AI-First</span>
+          <span class="tag" style="color:#B45309;border-color:#FDE68A;background:#FFFBEB;">Decision Support</span>
+          <span class="tag" style="color:#065F46;border-color:#A7F3D0;background:#ECFDF5;">Enterprise</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-meta">
+      <strong>Founded 2019, New York</strong>
+      Raised: $55M+<br>
+      Backed by: Workday Ventures<br>
+      <span style="color:#D97706;font-weight:600;">⚠ Platform tied to Workday ecosystem</span>
+    </div>
+  </div>
+
+  <div class="alert">
+    <strong>Key Intel:</strong> Nayya's "Agentic AI" positioning is their most forward-looking claim, but it risks being too abstract for HR buyers focused on immediate problems. Their platform is also <strong>heavily dependent on Workday integration</strong>, limiting their appeal outside the Workday customer base.
+  </div>
+
+  <p class="section-label">SNAPSHOT</p>
+  <div class="snapshot">
+    <div class="snapshot-cell"><div class="label">Core Claim</div><div class="value">"Agentic AI" for proactive, personalized benefits guidance year-round</div></div>
+    <div class="snapshot-cell"><div class="label">Primary Buyer</div><div class="value">Enterprise HR &amp; Benefits leaders at large employers using Workday</div></div>
+    <div class="snapshot-cell"><div class="label">Differentiator</div><div class="value">AI-driven decision support at open enrollment; proactive guidance throughout the year</div></div>
+    <div class="snapshot-cell"><div class="label">Key Weakness</div><div class="value">Feature, not a platform. Value is dependent on data quality from other systems. Workday-dependent.</div></div>
+  </div>
+
+  <p class="section-label">BROKER OBJECTIONS &amp; RESPONSES</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>What the Broker Says</th><th>How to Respond</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>"Nayya's AI-powered guidance seems really advanced. How do you compete with that?"</td>
+          <td>"Nayya's AI is a powerful tool for helping employees choose a plan at open enrollment. Our 'Buddy AI' is a daily health companion that guides members to live healthier every single day. It's the difference between a GPS for a single road trip and a co-pilot for the entire journey of your health. One is a point-in-time decision tool; the other is a continuous engagement engine."</td>
+        </tr>
+        <tr>
+          <td>"They talk about 'Agentic AI' and proactive benefits management. That sounds like the future."</td>
+          <td>"It's an exciting vision. The challenge is that 'Agentic AI' is still largely theoretical for most HR buyers. Our AI is already delivering tangible outcomes today: personalized health recommendations, behavioral risk scoring, and real-time engagement data for brokers and employers. We're not promising the future; we're delivering it now."</td>
+        </tr>
+        <tr>
+          <td>"My clients are asking for more personalization in their benefits. Nayya seems to deliver that."</td>
+          <td>"Personalization is a key trend, and Nayya does it well at enrollment time. We deliver personalization every day. Our Buddy AI learns what motivates each individual member — what rewards they respond to, what health content is relevant to them — and gets smarter over time. It's personalization that compounds, not personalization that happens once a year."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-label">QUICK-FIRE: WHEN YOU HEAR X, SAY Y</p>
+  <div class="quickfire">
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"AI" or "artificial intelligence"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"We love that conversation. Our AI operates on 3,000+ variables per user across five data stages — including actual insurance claims outcomes. Nayya's AI operates on plan selection data. The depth of our data moat is what makes our AI genuinely predictive, not just recommendatory."</p></div>
+    </div>
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"Decision support"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"Decision support at enrollment is valuable. But the bigger problem is that 71% of Millennials and Gen Z are not insured at all. We solve the engagement problem first — by making benefits and insurance something people interact with daily — and decision support becomes far more effective as a result."</p></div>
+    </div>
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"Workday Ventures" or "Workday integration"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"Their Workday backing is a strong signal of enterprise ambitions — and a signal of dependency. If your client isn't on Workday, Nayya's value proposition weakens significantly. Our platform is a neutral, carrier-agnostic operating layer that integrates with any HRIS, not just one."</p></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="bottom-grid">
+    <div class="weakness-box">
+      <div class="box-title">⚠ Their Structural Weaknesses</div>
+      <div class="weakness-item"><strong>Feature, Not a Platform</strong>Decision support is a feature that can be replicated. They need to be integrated into a broader ecosystem to deliver value.</div>
+      <div class="weakness-item"><strong>Workday Dependency</strong>Their deepest integrations and strongest use cases are tied to the Workday ecosystem, limiting their addressable market.</div>
+      <div class="weakness-item"><strong>Abstract Value Proposition</strong>"Agentic AI" is a compelling vision but difficult to demonstrate concretely to HR buyers focused on immediate, practical problems.</div>
+    </div>
+    <div class="proof-box">
+      <div class="box-title">✅ Your Betterfly Proof Points</div>
+      <div class="proof-item"><strong>Continuous Engagement AI</strong>Buddy AI is a daily health companion, not a once-a-year enrollment tool. It gets smarter with every interaction.</div>
+      <div class="proof-item"><strong>Tangible Rewards vs. Plan Recommendations</strong>We provide personalized rewards with real economic value — including increased insurance coverage — not just plan comparisons.</div>
+      <div class="proof-item"><strong>Unified Platform</strong>We are the ecosystem. Our HIOS is a single, unified platform connecting the member, broker, employer, and insurer — no integration patchwork required.</div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <div class="closing-label">Recommended Closing Question</div>
+    <p>"Is it more valuable for your clients to have an AI that helps their employees <em>choose</em> their benefits once a year, or an AI that helps them <em>improve</em> their health and their benefits every single day?"</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CARD 4: SELERIX
+════════════════════════════════════════════ -->
+<div class="card" id="selerix">
+  <div class="card-header">
+    <div class="card-header-left">
+      <div class="card-logo" style="background:var(--selerix-green);">SX</div>
+      <div class="card-title">
+        <h2>Selerix</h2>
+        <p>Enterprise benefits administration &amp; enrollment software (BenSelect)</p>
+        <div class="tags">
+          <span class="tag" style="color:var(--selerix-green);border-color:#A7F3D0;background:#ECFDF5;">Enterprise</span>
+          <span class="tag" style="color:#B45309;border-color:#FDE68A;background:#FFFBEB;">Legacy Platform</span>
+          <span class="tag" style="color:#1D4ED8;border-color:#BFDBFE;background:#EFF6FF;">Benefits Admin</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-meta">
+      <strong>Founded 2003, McKinney TX</strong>
+      Markets: US<br>
+      <span style="color:#D97706;font-weight:600;">⚠ Legacy architecture; AI is bolt-on</span>
+    </div>
+  </div>
+
+  <div class="alert">
+    <strong>Key Intel:</strong> Selerix is a powerful but aging platform. Their "Benefits Genius AI" is a recent bolt-on, not a native capability. Their greatest strength (deep customization) is also their greatest weakness: <strong>long, expensive implementations</strong> that create friction for brokers and employers.
+  </div>
+
+  <p class="section-label">SNAPSHOT</p>
+  <div class="snapshot">
+    <div class="snapshot-cell"><div class="label">Core Claim</div><div class="value">Enterprise-grade benefits administration with deep customization and complex eligibility handling</div></div>
+    <div class="snapshot-cell"><div class="label">Primary Buyer</div><div class="value">Large employers, brokers, and carriers needing powerful, flexible benefits admin</div></div>
+    <div class="snapshot-cell"><div class="label">Differentiator</div><div class="value">BenSelect platform handles extreme complexity; long track record with large accounts</div></div>
+    <div class="snapshot-cell"><div class="label">Key Weakness</div><div class="value">Legacy technology, complex UI, long implementations, no native engagement layer</div></div>
+  </div>
+
+  <p class="section-label">BROKER OBJECTIONS &amp; RESPONSES</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>What the Broker Says</th><th>How to Respond</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>"Selerix is a proven platform. We've been using it for years. Why should we switch?"</td>
+          <td>"Selerix is a powerful and established platform for complex administration — we respect that. The question is what happens after enrollment. Selerix is a system that HR teams use; we are a platform that employees use every day. Our Health &amp; Insurance OS turns benefits from a once-a-year admin task into a daily engagement experience that generates real health and financial value for your client's population."</td>
+        </tr>
+        <tr>
+          <td>"We need a platform that can handle our most complex clients. Can your platform do that?"</td>
+          <td>"We'd love to dig into the specifics. Our platform is designed to handle the full range of benefits administration scenarios with a modern, intuitive interface. More importantly, we add a layer that Selerix simply doesn't have: a daily engagement engine, an AI health companion, and a data flywheel that connects employee behavior to insurance outcomes. Complexity in administration is table stakes; daily engagement is the differentiator."</td>
+        </tr>
+        <tr>
+          <td>"Their 'Benefits Genius' AI seems interesting. What do you have that's similar?"</td>
+          <td>"Benefits Genius is a smart addition to their platform. Our AI is native, not bolt-on. It's built into the core of our platform and powers everything from personalized health recommendations to behavioral risk scoring. It learns from 3,000+ variables per user and gets smarter every day. That's a fundamentally different level of intelligence."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-label">QUICK-FIRE: WHEN YOU HEAR X, SAY Y</p>
+  <div class="quickfire">
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"BenSelect"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"BenSelect is a powerful system for managing complexity on the admin side. We provide that same power with a modern, beautiful interface that employees actually want to use — and we add a daily engagement layer that BenSelect simply doesn't have."</p></div>
+    </div>
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"Legacy system" or "old school"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"Reliability matters — and Selerix has it. But in today's market, user experience is a competitive advantage. If employees find their benefits platform confusing or uninspiring, they disengage. Our platform is designed to be something people actually enjoy using, which drives higher enrollment rates and better health outcomes."</p></div>
+    </div>
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"Customization"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"Deep customization often means long, expensive implementations. We believe in fast, flexible configuration. Our platform can be up and running quickly, delivering value from day one — without a 6-month IT project. And our modular product catalog means you can tailor the experience without custom development."</p></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="bottom-grid">
+    <div class="weakness-box">
+      <div class="box-title">⚠ Their Structural Weaknesses</div>
+      <div class="weakness-item"><strong>Legacy Technology</strong>Built on older architecture; can feel dated and less user-friendly compared to modern, cloud-native solutions.</div>
+      <div class="weakness-item"><strong>Complexity as a Barrier</strong>The platform's greatest strength is also its greatest weakness — overwhelming for smaller employers and less experienced users.</div>
+      <div class="weakness-item"><strong>No Engagement Layer</strong>Selerix is a system HR teams use once a year. There is no daily member engagement, no health rewards, no AI companion.</div>
+    </div>
+    <div class="proof-box">
+      <div class="box-title">✅ Your Betterfly Proof Points</div>
+      <div class="proof-item"><strong>Modern Engagement vs. Legacy Administration</strong>We turn benefits from a once-a-year admin task into a daily engagement experience that generates real health and financial value.</div>
+      <div class="proof-item"><strong>Native AI, Not Bolt-On</strong>Our AI is built into the core of the platform, powering personalized health guidance, behavioral risk scoring, and dynamic rewards.</div>
+      <div class="proof-item"><strong>Fast Configuration</strong>Modern, intuitive platform with fast configuration — no 6-month implementation project required.</div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <div class="closing-label">Recommended Closing Question</div>
+    <p>"Are your clients looking for a powerful but complex system that only their HR team sees once a year, or a simple, engaging platform that their employees will use and love every single day?"</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CARD 5: NAVA BENEFITS
+════════════════════════════════════════════ -->
+<div class="card" id="nava">
+  <div class="card-header">
+    <div class="card-header-left">
+      <div class="card-logo" style="background:var(--nava-red);">NV</div>
+      <div class="card-title">
+        <h2>Nava Benefits</h2>
+        <p>Tech-enabled modern brokerage — startup &amp; SMB focused</p>
+        <div class="tags">
+          <span class="tag" style="color:var(--nava-red);border-color:#FECDD3;background:#FFF1F2;">Brokerage</span>
+          <span class="tag" style="color:#B45309;border-color:#FDE68A;background:#FFFBEB;">Startup-Focused</span>
+          <span class="tag" style="color:#065F46;border-color:#A7F3D0;background:#ECFDF5;">SMB</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-meta">
+      <strong>Founded 2019, New York</strong>
+      Raised: $50M+<br>
+      Markets: US<br>
+      <span style="color:#DC2626;font-weight:600;">🚨 Platform tied to brokerage relationship</span>
+    </div>
+  </div>
+
+  <div class="alert">
+    <strong>Key Intel:</strong> Nava's technology is inseparable from their brokerage services. <strong>If a client leaves Nava as their broker, they lose access to the Nava HQ platform.</strong> This is a significant lock-in risk that brokers should understand — and that Betterfly directly solves.
+  </div>
+
+  <p class="section-label">SNAPSHOT</p>
+  <div class="snapshot">
+    <div class="snapshot-cell"><div class="label">Core Claim</div><div class="value">"Modern benefits, simplified" — tech-enabled brokerage with proprietary Nava HQ platform</div></div>
+    <div class="snapshot-cell"><div class="label">Primary Buyer</div><div class="value">CEOs, CFOs, Heads of People at startups &amp; SMBs (50–500 employees)</div></div>
+    <div class="snapshot-cell"><div class="label">Differentiator</div><div class="value">Bundled tech + service; curated modern carrier network; high-touch support model</div></div>
+    <div class="snapshot-cell"><div class="label">Key Weakness</div><div class="value">Brokerage-first, not tech-first. Platform access lost if client changes broker. Limited carrier selection.</div></div>
+  </div>
+
+  <p class="section-label">BROKER OBJECTIONS &amp; RESPONSES</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>What the Broker Says</th><th>How to Respond</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>"Nava seems like a great all-in-one solution for my startup clients. Why would they need a separate platform?"</td>
+          <td>"Nava has a fantastic model for startups, and their bundled approach is genuinely appealing. The critical question is: what happens when your client grows and wants more flexibility? Nava's technology is tied to their brokerage. Our Health &amp; Insurance Operating System is independent. Your client owns their platform relationship regardless of which broker they use. That's a fundamentally more durable foundation."</td>
+        </tr>
+        <tr>
+          <td>"Their 'Nava HQ' platform looks pretty slick. How does your platform compare?"</td>
+          <td>"Nava HQ is a great-looking platform built to support their brokerage services. Our platform is a standalone, carrier-agnostic Health &amp; Insurance OS that puts the client in control. Beyond administration, we add a daily engagement layer — a member app with health rewards, Buddy AI, community challenges, and a marketplace — that Nava HQ simply doesn't have."</td>
+        </tr>
+        <tr>
+          <td>"They talk about being a 'co-pilot' for benefits. That's a very appealing message."</td>
+          <td>"It's a great message. Our platform gives brokers the tools to be that co-pilot — with real-time engagement data, early risk signals, and a continuous view of population health. The difference is that our co-pilot tools are available to any broker, not just the ones who work for Nava. We empower you, not compete with you."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-label">QUICK-FIRE: WHEN YOU HEAR X, SAY Y</p>
+  <div class="quickfire">
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"Modern brokerage"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"Modern is a great goal. The most modern approach is an independent technology platform that works with any broker and any carrier. That's what we provide. Nava is a modern brokerage; we are a modern platform. The difference is that our technology outlasts any single brokerage relationship."</p></div>
+    </div>
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"Startup-focused" or "Nava HQ"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"Startups have unique needs, and Nava serves them well. But startups grow into mid-market companies. Our platform is designed to scale with them — from 50 employees to 50,000 — without the client ever having to re-platform. We're a foundation they can grow on."</p></div>
+    </div>
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"Curated carrier network"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"'Curated' is another word for limited. We provide a truly open, carrier-agnostic ecosystem. Our platform is a neutral orchestration layer that allows you to plug in the best carriers and solutions for your client — without restriction. That's true choice."</p></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="bottom-grid">
+    <div class="weakness-box">
+      <div class="box-title">⚠ Their Structural Weaknesses</div>
+      <div class="weakness-item"><strong>Brokerage Lock-In</strong>Platform access is contingent on the brokerage relationship. Clients lose their tech if they change brokers.</div>
+      <div class="weakness-item"><strong>Limited Carrier Options</strong>Their "curated network" limits carrier choice, which can disadvantage clients with specific needs or those who want to shop the market.</div>
+      <div class="weakness-item"><strong>Scalability Ceiling</strong>High-touch service model is difficult to scale as clients grow beyond the SMB segment.</div>
+    </div>
+    <div class="proof-box">
+      <div class="box-title">✅ Your Betterfly Proof Points</div>
+      <div class="proof-item"><strong>Independent Tech Platform</strong>Our HIOS is independent of any brokerage relationship. Clients own their platform experience permanently.</div>
+      <div class="proof-item"><strong>Open Carrier Ecosystem</strong>We are a neutral orchestration layer. Any carrier, any broker, any configuration — true freedom of choice.</div>
+      <div class="proof-item"><strong>Scalable Intelligence</strong>Our AI and data flywheel get smarter with every user. Intelligence scales; high-touch service doesn't.</div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <div class="closing-label">Recommended Closing Question</div>
+    <p>"Is it a better long-term strategy for your clients to adopt a technology platform that is tied to a single brokerage, or to adopt an independent platform that gives them the freedom to choose the best broker for their needs at any time?"</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     CARD 6: AETNA WELLNESS
+════════════════════════════════════════════ -->
+<div class="card" id="aetna">
+  <div class="card-header">
+    <div class="card-header-left">
+      <div class="card-logo" style="background:var(--aetna-darkred);">AE</div>
+      <div class="card-title">
+        <h2>Aetna Wellness</h2>
+        <p>Carrier-embedded wellness tools — part of CVS Health</p>
+        <div class="tags">
+          <span class="tag" style="color:var(--aetna-darkred);border-color:#FECDD3;background:#FFF1F2;">Carrier</span>
+          <span class="tag" style="color:#B45309;border-color:#FDE68A;background:#FFFBEB;">CVS Health</span>
+          <span class="tag" style="color:#1D4ED8;border-color:#BFDBFE;background:#EFF6FF;">Enterprise</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-meta">
+      <strong>Founded 1853, Hartford CT</strong>
+      Part of CVS Health<br>
+      Markets: US<br>
+      <span style="color:#DC2626;font-weight:600;">🚨 Wellness tools require Aetna medical plan</span>
+    </div>
+  </div>
+
+  <div class="alert">
+    <strong>Key Intel:</strong> Aetna's wellness tools are <strong>exclusively available to Aetna medical plan members</strong>. This creates a hard carrier lock-in: clients must buy Aetna's medical insurance to access their wellness capabilities. Betterfly is carrier-agnostic and works alongside any medical plan.
+  </div>
+
+  <p class="section-label">SNAPSHOT</p>
+  <div class="snapshot">
+    <div class="snapshot-cell"><div class="label">Core Claim</div><div class="value">Integrated health, wellness, and insurance from a trusted, established carrier with a massive provider network</div></div>
+    <div class="snapshot-cell"><div class="label">Primary Buyer</div><div class="value">Employers of all sizes seeking a single-carrier solution for medical, dental, vision, and wellness</div></div>
+    <div class="snapshot-cell"><div class="label">Differentiator</div><div class="value">Brand trust, massive provider network, CVS retail integration, MinuteClinic access</div></div>
+    <div class="snapshot-cell"><div class="label">Key Weakness</div><div class="value">Carrier lock-in; reactive claims model; wellness tools are siloed from daily life; legacy systems</div></div>
+  </div>
+
+  <p class="section-label">BROKER OBJECTIONS &amp; RESPONSES</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>What the Broker Says</th><th>How to Respond</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>"Aetna is a huge, well-known brand. My clients trust them."</td>
+          <td>"Aetna's brand trust is well-earned and we respect it. We're not here to replace Aetna — we're here to make Aetna better. Our Health &amp; Insurance OS is a carrier-agnostic engagement layer that works alongside Aetna's medical plans. We provide the daily, rewarding experience that a traditional carrier lacks, driving member engagement in a way that Aetna simply can't. We activate Aetna; we don't replace it."</td>
+        </tr>
+        <tr>
+          <td>"They have a massive network of doctors and hospitals. How can you compete with that?"</td>
+          <td>"We don't compete with their network — we complement it. Our platform helps members navigate their Aetna benefits more effectively, find in-network providers, and access telehealth, mental health, and pharmacy benefits all in one place. More importantly, we provide the behavioral data that predicts when someone will need that network — before they get sick. That's a capability Aetna's claims data simply can't provide."</td>
+        </tr>
+        <tr>
+          <td>"They're part of CVS Health. That gives them a lot of integrated capabilities."</td>
+          <td>"The CVS-Aetna integration is powerful for clients who are fully committed to that ecosystem. The challenge is that it creates significant lock-in. Our platform is a neutral, carrier-agnostic layer that can work with Aetna, United, Cigna, or any other carrier. Your client gets the best of both worlds: access to Aetna's network and the flexibility to choose the best carrier for their needs every year."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="section-label">QUICK-FIRE: WHEN YOU HEAR X, SAY Y</p>
+  <div class="quickfire">
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"Carrier" or "network"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"We're carrier-agnostic. We work with all of them, including Aetna. Our goal is to provide a single, engaging platform for the member experience, regardless of the carrier. Think of us as the engagement layer that sits above the carrier layer."</p></div>
+    </div>
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"CVS" or "MinuteClinic"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"CVS integration is a genuine convenience benefit. We provide something more strategic: a platform that captures the daily behavioral data that predicts and prevents the need for a MinuteClinic visit in the first place. Prevention is always more valuable than convenient treatment."</p></div>
+    </div>
+    <div class="qf-row">
+      <div class="qf-hear"><div class="qf-badge">Hear</div><p>"Aetna wellness tools" or "Resources for Living"</p></div>
+      <div class="qf-say"><div class="qf-badge">Say</div><p>"Aetna's wellness tools are only available to Aetna medical plan members. Our platform works alongside any medical plan — Aetna, United, Cigna, or any other. Your client doesn't have to choose between their preferred carrier and a world-class wellness and engagement experience."</p></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="bottom-grid">
+    <div class="weakness-box">
+      <div class="box-title">⚠ Their Structural Weaknesses</div>
+      <div class="weakness-item"><strong>Hard Carrier Lock-In</strong>Wellness tools only work with Aetna medical plans. Clients must buy Aetna to access the full ecosystem.</div>
+      <div class="weakness-item"><strong>Reactive Claims Model</strong>Aetna sees the claim after someone gets sick. They lack the granular behavioral data needed to predict and prevent illness.</div>
+      <div class="weakness-item"><strong>Legacy Systems &amp; Bureaucracy</strong>As a large, established company, Aetna's innovation pace is constrained by legacy systems and organizational complexity.</div>
+    </div>
+    <div class="proof-box">
+      <div class="box-title">✅ Your Betterfly Proof Points</div>
+      <div class="proof-item"><strong>Carrier-Agnostic Intelligence Layer</strong>We work with Aetna, United, Cigna, or any carrier. Clients get best-in-class engagement without carrier lock-in.</div>
+      <div class="proof-item"><strong>Proactive Behavioral Data</strong>We see the thousands of daily behaviors that predict and prevent illness — 6–12 months before a claim is filed. Aetna sees the claim; we see the cause.</div>
+      <div class="proof-item"><strong>Daily Engagement vs. Reactive Coverage</strong>Our app turns insurance from a static contract into a daily, rewarding experience. Members earn Betterflies for healthy actions and can unlock increased coverage.</div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <div class="closing-label">Recommended Closing Question</div>
+    <p>"Do your clients want to be locked into a single carrier's ecosystem, or do they want an independent engagement platform that works with <em>any</em> carrier and gives them the data-driven insights to truly manage the health of their population — before claims are filed?"</p>
+  </div>
+</div>
+
+</div><!-- /main -->
+</body>
+</html>

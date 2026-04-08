@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Water is Life",
+    "category": "Clean Water",
+    "description": "Provides clean drinking water and sanitation to underserved communities worldwide.",
+    "logo_url": null,
+    "website": "https://waterislife.com"
+  },
+  {
+    "name": "Leche para Haiti",
+    "category": "Nutrition",
+    "description": "Delivers milk and nutritional support to children and families facing food insecurity.",
+    "logo_url": null,
+    "website": null
+  },
+  {
+    "name": "One Tree Planted",
+    "category": "Reforestation",
+    "description": "Helps restore forests and other endangered habitats by planting trees.",
+    "logo_url": null,
+    "website": "https://onetreeplanted.org"
+  }
+]

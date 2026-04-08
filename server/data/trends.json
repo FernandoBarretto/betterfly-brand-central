@@ -1,0 +1,248 @@
+{
+  "report_date": "2026-03-16",
+  "themes": [
+    {
+      "id": "trend-001",
+      "title": "Rising voluntary benefit adoption among SMBs",
+      "summary": "Small and medium businesses are rapidly expanding their voluntary benefits offerings, driven by competitive hiring pressures and employee demand for more personalized coverage. Employers with 10–500 employees now represent the fastest-growing segment for voluntary benefit enrollment.",
+      "data_points": [
+        {
+          "text": "62% of SMBs added at least one voluntary benefit in the past 18 months",
+          "source_name": "LIMRA 2025 Voluntary Benefits Report",
+          "source_url": "",
+          "verified": false
+        },
+        {
+          "text": "Voluntary benefit enrollment grew 28% year-over-year in companies with under 200 employees",
+          "source_name": "LIMRA 2025 Voluntary Benefits Report",
+          "source_url": "",
+          "verified": false
+        },
+        {
+          "text": "Top voluntary benefits requested by employees: dental (74%), vision (71%), life (68%), accident (51%)",
+          "source_name": "LIMRA 2025 Voluntary Benefits Report",
+          "source_url": "",
+          "verified": false
+        }
+      ],
+      "source": "LIMRA 2025 Voluntary Benefits Report",
+      "relevance": [
+        "Carriers",
+        "Brokers",
+        "Employers"
+      ]
+    },
+    {
+      "id": "trend-002",
+      "title": "Prevention-first benefits reduce claims and improve retention",
+      "summary": "Companies that integrate wellness and prevention programs into their benefits stack are seeing measurable improvements in claims outcomes and employee retention. The link between proactive health engagement and reduced healthcare costs is now well-documented across SMB populations.",
+      "data_points": [
+        {
+          "text": "Employers with prevention-first programs report 19% lower claims costs over 3 years",
+          "source_name": "SHRM Benefits Benchmarking Report 2025",
+          "source_url": "",
+          "verified": false
+        },
+        {
+          "text": "Employees who engage with wellness platforms are 2.4x more likely to renew voluntary benefits",
+          "source_name": "SHRM Benefits Benchmarking Report 2025",
+          "source_url": "",
+          "verified": false
+        },
+        {
+          "text": "Prevention-linked benefit enrollment conversion is 31% higher than traditional enrollment methods",
+          "source_name": "SHRM Benefits Benchmarking Report 2025",
+          "source_url": "",
+          "verified": false
+        }
+      ],
+      "source": "SHRM Benefits Benchmarking Report 2025",
+      "relevance": [
+        "Carriers",
+        "Brokers",
+        "Employers",
+        "General"
+      ]
+    },
+    {
+      "id": "trend-003",
+      "title": "Benefits confusion is the top reason employees leave coverage on the table",
+      "summary": "Despite expanded benefits offerings, utilization rates remain low primarily due to complexity and poor communication. Employees report not understanding their options as the single biggest barrier to enrollment in voluntary benefits.",
+      "data_points": [
+        {
+          "text": "58% of employees say they don't understand their voluntary benefit options well enough to enroll",
+          "source_name": "MetLife U.S. Employee Benefit Trends Study 2025",
+          "source_url": "",
+          "verified": false
+        },
+        {
+          "text": "Only 34% of eligible employees actively use more than one voluntary benefit",
+          "source_name": "MetLife U.S. Employee Benefit Trends Study 2025",
+          "source_url": "",
+          "verified": false
+        },
+        {
+          "text": "Companies with digital-first enrollment tools see 2x enrollment rates vs. paper-based processes",
+          "source_name": "MetLife U.S. Employee Benefit Trends Study 2025",
+          "source_url": "",
+          "verified": false
+        }
+      ],
+      "source": "MetLife U.S. Employee Benefit Trends Study 2025",
+      "relevance": [
+        "Employers",
+        "Employees",
+        "Brokers"
+      ]
+    },
+    {
+      "id": "trend-004",
+      "title": "Brokers are differentiating on benefits experience, not just price",
+      "summary": "The traditional price-led broker conversation is giving way to value-led conversations about employee experience, utilization rates, and retention outcomes. SMB brokers who can demonstrate measurable benefit engagement are winning and retaining more clients.",
+      "data_points": [
+        {
+          "text": "71% of HR directors say they would switch brokers for one who could improve employee benefit utilization",
+          "source_name": "SHRM Broker Value Study 2025",
+          "source_url": "",
+          "verified": false
+        },
+        {
+          "text": "Brokers who offer digital enrollment tools retain clients 40% longer on average",
+          "source_name": "SHRM Broker Value Study 2025",
+          "source_url": "",
+          "verified": false
+        },
+        {
+          "text": "SMB employer NPS for brokers who offer wellness-integrated benefits is 34 points higher than traditional brokers",
+          "source_name": "SHRM Broker Value Study 2025",
+          "source_url": "",
+          "verified": false
+        }
+      ],
+      "source": "SHRM Broker Value Study 2025",
+      "relevance": [
+        "Brokers",
+        "Employers"
+      ]
+    },
+    {
+      "id": "trend-005",
+      "title": "Carriers expanding distribution through embedded benefit platforms",
+      "summary": "Traditional carrier distribution channels are being supplemented by embedded benefit platforms that integrate coverage options into daily wellness journeys. This shift is dramatically improving conversion rates and reducing acquisition costs for carriers targeting SMB populations.",
+      "data_points": [
+        {
+          "text": "Embedded distribution channels deliver 2.6x higher conversion rates than traditional broker-direct models",
+          "source_name": "Deloitte Insurance Industry Outlook 2025",
+          "source_url": "",
+          "verified": false
+        },
+        {
+          "text": "Carrier acquisition costs in embedded channels are 45% lower than through traditional intermediaries",
+          "source_name": "Deloitte Insurance Industry Outlook 2025",
+          "source_url": "",
+          "verified": false
+        },
+        {
+          "text": "71% of carriers plan to increase investment in embedded benefits distribution by 2027",
+          "source_name": "Deloitte Insurance Industry Outlook 2025",
+          "source_url": "",
+          "verified": false
+        }
+      ],
+      "source": "Deloitte Insurance Industry Outlook 2025",
+      "relevance": [
+        "Carriers",
+        "General"
+      ]
+    },
+    {
+      "id": "trend-006",
+      "title": "Gen Z and Millennial employees are reshaping benefits expectations",
+      "summary": "The two largest workforce cohorts now expect benefits that are digital-first, personalized, and tied to their health and lifestyle goals. Traditional one-size-fits-all benefits packages are increasingly seen as inadequate by younger employees.",
+      "data_points": [
+        {
+          "text": "78% of Gen Z employees say personalized benefits would make them more loyal to their employer",
+          "source_name": "LinkedIn Workforce Trends Report 2025",
+          "source_url": "",
+          "verified": false
+        },
+        {
+          "text": "Millennials and Gen Z now make up 67% of the SMB workforce",
+          "source_name": "LinkedIn Workforce Trends Report 2025",
+          "source_url": "",
+          "verified": false
+        },
+        {
+          "text": "Benefits are the #2 reason employees cite for staying at a job, behind salary but ahead of career growth",
+          "source_name": "LinkedIn Workforce Trends Report 2025",
+          "source_url": "",
+          "verified": false
+        }
+      ],
+      "source": "LinkedIn Workforce Trends Report 2025",
+      "relevance": [
+        "Employers",
+        "Employees",
+        "General"
+      ]
+    },
+    {
+      "id": "trend-1773692604594-4kea",
+      "title": "Public Concern Over Prescription Drug Affordability Reaches New High",
+      "summary": "A KFF Health Tracking Poll finds that a growing majority of the public is worried about affording prescription drugs. Large majorities across political parties support greater government regulation of drug prices, coinciding with the Trump administration's TrumpRx initiative.",
+      "data_points": [
+        {
+          "text": "A growing majority of the public worries about being able to afford prescription drugs, reaching a new high.",
+          "source_name": "KFF",
+          "source_url": "https://www.kff.org/public-opinion/poll-public-worries-about-prescription-drug-costs-reach-new-high-most-across-political-parties-want-government-to-do-more-to-regulate-prices/",
+          "category": "health_data",
+          "verified": true
+        },
+        {
+          "text": "Large majorities across political parties want the government to do more to regulate prescription drug prices.",
+          "source_name": "KFF",
+          "source_url": "https://www.kff.org/public-opinion/poll-public-worries-about-prescription-drug-costs-reach-new-high-most-across-political-parties-want-government-to-do-more-to-regulate-prices/",
+          "category": "health_data",
+          "verified": true
+        }
+      ],
+      "source": "KFF",
+      "relevance": [
+        "Carriers",
+        "Brokers",
+        "Employers",
+        "Employees",
+        "General"
+      ]
+    },
+    {
+      "id": "trend-1773692604594-1md4",
+      "title": "Public Concern Over Prescription Drug Affordability Reaches New High",
+      "summary": "A new KFF Health Tracking Poll finds that a growing majority of the public is worried about affording prescription drugs. Large majorities across political parties support greater government regulation of drug prices, coinciding with the Trump administration's TrumpRx initiative.",
+      "data_points": [
+        {
+          "text": "A growing majority of the public worries about being able to afford prescription drugs, reaching a new high.",
+          "source_name": "KFF",
+          "source_url": "https://www.kff.org/public-opinion/poll-public-worries-about-prescription-drug-costs-reach-new-high-most-across-political-parties-want-government-to-do-more-to-regulate-prices/",
+          "category": "health_data",
+          "verified": true
+        },
+        {
+          "text": "Large majorities across political parties want the government to do more to regulate prescription drug prices.",
+          "source_name": "KFF",
+          "source_url": "https://www.kff.org/public-opinion/poll-public-worries-about-prescription-drug-costs-reach-new-high-most-across-political-parties-want-government-to-do-more-to-regulate-prices/",
+          "category": "health_data",
+          "verified": true
+        }
+      ],
+      "source": "KFF",
+      "relevance": [
+        "Carriers",
+        "Brokers",
+        "Employers",
+        "Employees",
+        "General"
+      ]
+    }
+  ]
+}

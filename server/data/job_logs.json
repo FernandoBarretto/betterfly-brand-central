@@ -1,0 +1,59 @@
+[
+  {
+    "run_id": "run-1773692294926",
+    "started_at": "2026-03-16T20:18:14.926Z",
+    "completed_at": "2026-03-16T20:20:45.796Z",
+    "trends_fetched": 1,
+    "competitors_processed": 10,
+    "staging_written": 22,
+    "errors": [
+      "RSS fetch error (SHRM News): Status code 404",
+      "RSS fetch error (BenefitsPro): Status code 404",
+      "RSS fetch error (Employee Benefit Adviser): Status code 404",
+      "RSS fetch error (Employee Benefit News): No whitespace between attributes\nLine: 0\nColumn: 3999\nChar: s",
+      "RSS fetch error (Digital Insurance): Attribute without value\nLine: 12\nColumn: 111\nChar: >",
+      "RSS fetch error (Coverager): Status code 403",
+      "RSS fetch error (Gusto Blog): Status code 403",
+      "RSS fetch error (Business Wire): Request timed out after 60000ms",
+      "Crawl error (Nava Benefits — https://nava.com/platform): fetch failed",
+      "Crawl error (Nava Benefits — https://nava.com/blog): fetch failed",
+      "Crawl error (Nava Benefits — https://nava.com/resources): fetch failed"
+    ],
+    "status": "success"
+  },
+  {
+    "run_id": "run-1773687704997",
+    "started_at": "2026-03-16T19:01:44.997Z",
+    "completed_at": "2026-03-16T19:03:12.175Z",
+    "trends_fetched": 1,
+    "competitors_processed": 0,
+    "staging_written": 1,
+    "errors": [
+      "RSS fetch error (SHRM News): Status code 404",
+      "RSS fetch error (BenefitsPro): Status code 404",
+      "RSS fetch error (Employee Benefit Adviser): Status code 404",
+      "RSS fetch error (Employee Benefit News): No whitespace between attributes\nLine: 0\nColumn: 3999\nChar: s",
+      "Rejected non-trusted feed: https://dig.in/feed/",
+      "RSS fetch error (Coverager): Status code 403",
+      "RSS fetch error (Gusto Blog): Status code 403",
+      "RSS fetch error (Business Wire): Request timed out after 60000ms",
+      "Rejected non-trusted competitor URL: https://yulife.com/product",
+      "Rejected non-trusted competitor URL: https://yulife.com/blog",
+      "Rejected non-trusted competitor URL: https://yulife.com/employers",
+      "Rejected non-trusted competitor URL: https://beambenefits.com/employers",
+      "Rejected non-trusted competitor URL: https://beambenefits.com/brokers",
+      "Rejected non-trusted competitor URL: https://beambenefits.com/blog",
+      "Rejected non-trusted competitor URL: https://nayya.com/product",
+      "Rejected non-trusted competitor URL: https://nayya.com/blog",
+      "Rejected non-trusted competitor URL: https://nayya.com/press",
+      "Rejected non-trusted competitor URL: https://selerix.com/benselect",
+      "Rejected non-trusted competitor URL: https://selerix.com/blog",
+      "Rejected non-trusted competitor URL: https://nava.com/platform",
+      "Rejected non-trusted competitor URL: https://nava.com/blog",
+      "Rejected non-trusted competitor URL: https://nava.com/resources",
+      "Rejected non-trusted competitor URL: https://www.aetna.com/employers/wellness-programs.html",
+      "Rejected non-trusted competitor URL: https://news.aetna.com"
+    ],
+    "status": "success"
+  }
+]

@@ -1,0 +1,1 @@
+Drop reference PNGs, style tiles, logo files, and slide screenshots here. The Asset Generator uses these as visual reference examples.

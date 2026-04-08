@@ -1,0 +1,12 @@
+packages:
+  - lib/*
+
+overrides:
+  # drizzle-kit uses esbuild internally on an older version that's vulnerable, this overrides it
+  "@esbuild-kit/esm-loader": "npm:tsx@^4.21.0"
+
+autoInstallPeers: false
+
+onlyBuiltDependencies:
+  - esbuild
+  - unrs-resolver

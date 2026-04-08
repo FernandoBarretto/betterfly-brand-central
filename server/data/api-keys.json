@@ -1,0 +1,20 @@
+[
+  {
+    "id": "180dfd9f-9acc-4e0e-b2a2-efe2761ed52e",
+    "key": "bf_e20e7fafd262bbac1ba5fa96081818acf43ce4916550df0e",
+    "label": "Test Key",
+    "createdAt": "2026-03-27T19:44:17.972Z",
+    "lastUsedAt": null,
+    "usageCount": 0,
+    "active": true
+  },
+  {
+    "id": "0c233a7f-f5df-447b-a5b5-cf018833dac9",
+    "key": "bf_7e5f7ec3ef5094033e7cf12681e30136ece11e9150836676",
+    "label": "Test Key",
+    "createdAt": "2026-03-27T19:44:21.903Z",
+    "lastUsedAt": "2026-03-27T19:44:31.868Z",
+    "usageCount": 3,
+    "active": false
+  }
+]

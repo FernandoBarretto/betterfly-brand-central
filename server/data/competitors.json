@@ -1,0 +1,570 @@
+{
+  "last_job_run": "2026-03-16T20:20:45.796Z",
+  "competitors": [
+    {
+      "id": "yulife",
+      "initials": "YU",
+      "name": "YuLife",
+      "tagline": "Insurance that inspires life — gamified group life & wellness",
+      "color": "#7B2D8B",
+      "bg": "#F3E8FF",
+      "founded": "2016, London · Raised $206M+",
+      "markets": "UK, US, Japan, SA",
+      "maturity": "High",
+      "maturityColor": "#10b981",
+      "last_updated": "2026-03-10",
+      "watch_urls": [
+        "https://yulife.com/product",
+        "https://yulife.com/blog",
+        "https://yulife.com/employers"
+      ],
+      "positioning": {
+        "text": "YuLife reframes group life insurance as a daily engagement platform rather than a passive safety net. The central mechanism is YuCoin — a proprietary reward currency earned through physical activity, mindfulness, and healthy behaviours — redeemable at major retailers (Amazon, Nike, ASOS). The proposition to HR buyers is measurable wellbeing ROI; to employees, it is a game they are paid to play.",
+        "source_name": "YuLife Product Page",
+        "source_url": "https://yulife.com/product"
+      },
+      "key_differentiators": [
+        {
+          "text": "YuCoin behaviour-to-benefit loop: walk 10 minutes → earn 120 YuCoins → redeem for £1 at Amazon",
+          "source_name": "YuLife Product Page",
+          "source_url": "https://yulife.com/product"
+        },
+        {
+          "text": "Engaged members generate 3× the average engagement of traditional benefits",
+          "source_name": "YuLife Claims",
+          "source_url": "https://yulife.com/employers"
+        },
+        {
+          "text": "Reward & Recognition module (launched 2024) extends platform into peer-to-peer recognition",
+          "source_name": "YuLife Blog",
+          "source_url": "https://yulife.com/blog"
+        }
+      ],
+      "analyses": [
+        {
+          "label": "Core Value Proposition",
+          "text": "YuLife reframes group life insurance as a daily engagement platform rather than a passive safety net. The central mechanism is YuCoin — a proprietary reward currency earned through physical activity, mindfulness, and healthy behaviours — redeemable at major retailers (Amazon, Nike, ASOS). The proposition to HR buyers is measurable wellbeing ROI; to employees, it is a game they are paid to play.",
+          "source_url": "https://yulife.com/product"
+        },
+        {
+          "label": "Capability Framing",
+          "text": "YuLife positions its product as a 'wellbeing operating system' layered on top of traditional life insurance. Key capabilities marketed include: streak-based daily challenges, a personalised avatar (Yu), team leaderboards, mental health content (meditation, breathing), and an employer analytics dashboard. The Reward & Recognition module (launched 2024) extends the platform into peer-to-peer recognition.",
+          "source_url": ""
+        },
+        {
+          "label": "Audience Targeting",
+          "text": "Primary buyer: HR Directors and Chief People Officers at mid-market to enterprise UK employers (500–10,000 employees), particularly in financial services, professional services, and tech. Campaign creative on LinkedIn targets HR decision-makers with ROI-led messaging; the 'YuLife Unplugged' podcast series targets the broader HR community with thought leadership.",
+          "source_url": ""
+        },
+        {
+          "label": "Behaviour-to-Benefit Loop",
+          "text": "YuLife's core mechanism is the clearest behaviour-to-benefit loop in the competitive set: walk 10 minutes → earn 120 YuCoins → redeem for £1 at Amazon. This tangible, immediate reward loop is central to all campaign messaging. The platform also claims that engaged members generate 3× the average engagement of traditional benefits.",
+          "source_url": ""
+        },
+        {
+          "label": "Tone & Messaging",
+          "text": "Warm, optimistic, and energetic — language of possibility and reward rather than protection and risk. Avoids insurance jargon entirely in consumer-facing content. Employer-facing messaging shifts to data-led language: engagement rates, ROI dashboards, and population health metrics.",
+          "source_url": ""
+        },
+        {
+          "label": "Campaign Creative",
+          "text": "Brand palette centres on deep purple (#7B2D8B), warm yellow (#F59E0B), and soft lavender. Illustration style is flat, friendly, and gamified — featuring the Yu avatar, coin icons, and landscape scenes. The 'Unplugged' podcast series uses bold pop-art typography on white backgrounds, demonstrating creative range.",
+          "source_url": ""
+        },
+        {
+          "label": "Strategic Gaps",
+          "text": "YuLife runs zero active paid ads on Meta (confirmed via Ad Library, March 2025). All paid media is LinkedIn-only. No US-specific creative distinct from UK assets. The gamification mechanic is the strongest differentiator but is underexplained in short-form ad formats — a creative challenge for top-of-funnel awareness.",
+          "source_url": ""
+        }
+      ],
+      "matrix": {
+        "primary_model": "Insurer + Wellness App",
+        "core_buyer": "HR Director / CPO",
+        "engagement_loop": "Daily gamification",
+        "gamification": "Core differentiator",
+        "ai_personalisation": "Wellness recs",
+        "market_geography": "UK, US, JP, SA",
+        "paid_social_meta": "Zero active",
+        "creative_maturity": "High — distinctive"
+      }
+    },
+    {
+      "id": "beam",
+      "initials": "BE",
+      "name": "Beam Benefits",
+      "tagline": "Simpler, smarter employee benefits — dental, vision, disability & life",
+      "color": "#1A4FBA",
+      "bg": "#EFF6FF",
+      "founded": "2012, Columbus OH · Raised $160M+",
+      "markets": "US only · Deloitte Fast 500 (2024)",
+      "maturity": "Medium",
+      "maturityColor": "#f59e0b",
+      "last_updated": "2026-03-16",
+      "watch_urls": [
+        "https://beambenefits.com/employers",
+        "https://beambenefits.com/brokers",
+        "https://beambenefits.com/blog"
+      ],
+      "positioning": {
+        "text": "The broker-facing page no longer references 'BeamElect' by name as the enrollment platform. Instead, broker enrollment and management are described as being handled through the 'Broker Portal' (with a preview of 'Lighthouse'). The core broker value proposition is framed around: quote in 30 seconds or less, compare underwritten and bindable rates in real time, and self-service tools — rather than an explicit 'guaranteed rates' or 'BeamElect' message.",
+        "source_url": "https://beambenefits.com/brokers",
+        "source_name": "Beam Benefits — monitored page"
+      },
+      "key_differentiators": [
+        {
+          "text": "2-year rate guarantees — lowest price volatility in the SMB carrier set",
+          "source_name": "Beam Benefits Website",
+          "source_url": "https://beambenefits.com/employers"
+        },
+        {
+          "text": "BeamElect digital enrollment — broker portal with real-time quoting",
+          "source_name": "Beam Benefits Website",
+          "source_url": "https://beambenefits.com/brokers"
+        },
+        {
+          "text": "Deloitte Technology Fast 500 recognition (2024)",
+          "source_name": "Beam Benefits Press",
+          "source_url": ""
+        },
+        {
+          "text": "Beam has introduced 'Lighthouse,' described as a 'one-stop portal for plan administration and employee education,' replacing or supplementing the previously known BeamElect platform as the primary employer administration portal.",
+          "source_url": "https://beambenefits.com/employers",
+          "source_name": "Beam Benefits — monitored page"
+        },
+        {
+          "text": "Beam now explicitly lists Accident, Hospital Indemnity, and Critical Illness as offered product lines on the employers page, expanding the known product set beyond dental, vision, life, disability, and supplemental life.",
+          "source_url": "https://beambenefits.com/employers",
+          "source_name": "Beam Benefits — monitored page"
+        },
+        {
+          "text": "Beam now offers Accident, Hospital Indemnity, and Critical Illness insurance products (supplemental health) in addition to the previously known Dental, Vision, Life, and Disability lines. These are underwritten by Nationwide Life Insurance Company and marketed by Beam Insurance Services LLC.",
+          "source_url": "https://beambenefits.com/brokers",
+          "source_name": "Beam Benefits — monitored page"
+        },
+        {
+          "text": "Beam has introduced a 'Lighthouse' Broker Portal (referenced as 'Preview Lighthouse Broker Portal login'), which appears to be a new or updated broker portal product. The portal enables quoting multiple products in one place, comparing underwritten and bindable rates in real time, and managing clients and their employees.",
+          "source_url": "https://beambenefits.com/brokers",
+          "source_name": "Beam Benefits — monitored page"
+        },
+        {
+          "text": "Beam offers a 'Beam Perks' program where groups can earn plan discounts and members can redeem points in the Beam shop by maintaining consistent wellness habits. This is positioned as an incentive for preventive care.",
+          "source_url": "https://beambenefits.com/brokers",
+          "source_name": "Beam Benefits — monitored page"
+        },
+        {
+          "text": "Beam offers a product called 'Beam Accident' which provides financial support for non-work related accidents or injuries regardless of other health coverage.",
+          "source_url": "https://beambenefits.com/blog",
+          "source_name": "Beam Benefits — monitored page"
+        },
+        {
+          "text": "Beam offers a product called 'Beam Hospital Indemnity' which helps cover expenses for hospital stays.",
+          "source_url": "https://beambenefits.com/blog",
+          "source_name": "Beam Benefits — monitored page"
+        },
+        {
+          "text": "Beam's upgraded platform enables brokers to quote, sign, and onboard all within a single digital platform, positioned as enhancing efficiency and client satisfaction.",
+          "source_url": "https://beambenefits.com/blog",
+          "source_name": "Beam Benefits — monitored page"
+        }
+      ],
+      "analyses": [
+        {
+          "label": "Core Value Proposition",
+          "text": "Post-rebrand from 'Beam Dental,' Beam Benefits positions itself as a full-stack voluntary benefits carrier offering dental, vision, disability, and supplemental life — all through a single, simplified administration platform. The core promise to brokers and employers is 'benefits simplified': guaranteed rates, easy enrollment via BeamElect, and a single carrier relationship for multiple benefit lines.",
+          "source_url": ""
+        },
+        {
+          "label": "Capability Framing",
+          "text": "Beam frames its capabilities around simplicity and speed for brokers and HR teams. Key marketed capabilities: 2-year rate guarantees, BeamElect digital enrollment, a broker portal with real-time quoting, and Deloitte Technology Fast 500 recognition (2024). The 'Benefits Revolution' positioning frames Beam as disrupting legacy carrier complexity.",
+          "source_url": ""
+        },
+        {
+          "label": "Audience Targeting",
+          "text": "Primary: employee benefits brokers and consultants who recommend carriers to SMB and mid-market employers (50–1,000 employees). Campaign creative consistently shows broker-friendly messaging ('Give the gift of a guaranteed rate') and family imagery to represent end-employee value.",
+          "source_url": ""
+        },
+        {
+          "label": "Behaviour-to-Benefit Loop",
+          "text": "Beam's differentiating behaviour-to-benefit mechanism — the smart toothbrush Perks programme — was discontinued in May 2025 due to only 4% member enrollment. Current messaging has no meaningful behaviour-change loop. The shift to 'benefits simplified' is a commoditised position without a distinctive engagement mechanism.",
+          "source_url": ""
+        },
+        {
+          "label": "Tone & Messaging",
+          "text": "Professional, broker-first, and simplicity-led. Language centres on 'guaranteed,' 'simplified,' and 'smarter.' Current rebrand messaging ('Benefits Revolution') is confident but unsubstantiated — what specifically is being revolutionised is unclear.",
+          "source_url": ""
+        },
+        {
+          "label": "Campaign Creative",
+          "text": "Rebrand visual identity uses deep navy blue (#1A4FBA) with white and light blue accents. Photography-led rather than illustration-based. Employer and broker-facing assets feature clean UI screenshots and data dashboards.",
+          "source_url": ""
+        },
+        {
+          "label": "Strategic Gaps",
+          "text": "The Perks programme sunset removes Beam's most distinctive consumer-facing differentiator. Without it, Beam is a carrier competing on price, simplicity, and brand familiarity — a crowded and price-sensitive position. The 'Benefits Revolution' campaign creates expectation of disruption that current product capabilities may not fully deliver.",
+          "source_url": ""
+        }
+      ],
+      "matrix": {
+        "primary_model": "Benefits Carrier",
+        "core_buyer": "Benefits Broker",
+        "engagement_loop": "Sunset May 2025",
+        "gamification": "None",
+        "ai_personalisation": "BeamElect enrollment",
+        "market_geography": "US only",
+        "paid_social_meta": "Minimal",
+        "creative_maturity": "Medium — rebrand"
+      }
+    },
+    {
+      "id": "nayya",
+      "initials": "NA",
+      "name": "Nayya",
+      "tagline": "AI-powered benefits decisions — always-on guidance for employees",
+      "color": "#1A1A2E",
+      "bg": "#F0F4FF",
+      "founded": "2019, New York · $60M+ raised (Workday Ventures)",
+      "markets": "US only · Mid-market to Enterprise",
+      "maturity": "High",
+      "maturityColor": "#10b981",
+      "last_updated": "2026-03-16",
+      "watch_urls": [
+        "https://nayya.com/product",
+        "https://nayya.com/blog",
+        "https://nayya.com/press"
+      ],
+      "positioning": {
+        "text": "Nayya's CSO Sara Chehrazi describes the platform as an agentic AI adviser that guides people and, with consent, acts on their behalf to connect health and wealth — explicitly framing the agent as capable of acting on behalf of the user, not only providing decision support.",
+        "source_url": "https://nayya.com/blog",
+        "source_name": "Nayya — monitored page"
+      },
+      "key_differentiators": [
+        {
+          "text": "SuperAgent — agentic AI platform for proactive benefits management (launched 2025)",
+          "source_name": "Nayya Blog",
+          "source_url": "https://nayya.com/blog"
+        },
+        {
+          "text": "Workday Ventures-backed HRIS integration depth",
+          "source_name": "Nayya Press",
+          "source_url": ""
+        },
+        {
+          "text": "Natural-language benefits Q&A interface",
+          "source_name": "Nayya Product Page",
+          "source_url": "https://nayya.com/product"
+        },
+        {
+          "text": "Nayya's engineering team built an MCP (Model Context Protocol) server that connects any compatible AI client to real, personalized benefits data, bridging the gap between general AI assistants and actual employer-specific benefits information such as 401(k) contributions.",
+          "source_url": "https://nayya.com/blog",
+          "source_name": "Nayya — monitored page"
+        }
+      ],
+      "analyses": [
+        {
+          "label": "Core Value Proposition",
+          "text": "Nayya positions itself as the AI intelligence layer between employees and their benefits — providing personalised, always-on decision support that turns complex benefits into clear choices. The 2025 launch of the 'Agentic Benefits Platform' (SuperAgent) marks a shift from reactive decision-support to proactive benefits management.",
+          "source_url": ""
+        },
+        {
+          "label": "Capability Framing",
+          "text": "Nayya frames capabilities around intelligence and personalisation: AI-powered plan recommendations, the Northstar acquisition-powered SuperAgent for proactive benefits management, Workday Ventures-backed HRIS integration depth, and a natural-language benefits Q&A interface. The 'Agentic' framing is the most forward-leaning in the competitive set.",
+          "source_url": ""
+        },
+        {
+          "label": "Audience Targeting",
+          "text": "Primary: HR technology buyers and benefits leaders at mid-market to enterprise companies who are already invested in digital benefits administration. Secondary: HRIS vendors and benefits platforms who embed Nayya as an AI layer. Campaign creative on LinkedIn targets HR tech buyers with bold, AI-forward messaging.",
+          "source_url": ""
+        },
+        {
+          "label": "Behaviour-to-Benefit Loop",
+          "text": "Nayya's behaviour-to-benefit connection is primarily cognitive rather than behavioural: it helps employees make better decisions rather than rewarding specific health behaviours. The AI surfaces the right plan at the right moment (open enrollment, life event) but does not create ongoing engagement loops between benefit usage decisions.",
+          "source_url": ""
+        },
+        {
+          "label": "Tone & Messaging",
+          "text": "Bold, AI-native, and future-forward. Language centres on 'intelligence,' 'agentic,' 'personalised,' and 'always-on.' Avoids insurance industry jargon. The messaging is the most sophisticated and tech-forward in the competitive set.",
+          "source_url": ""
+        },
+        {
+          "label": "Campaign Creative",
+          "text": "Striking dark navy (#1A2E4A) with bold yellow-gold (#F59E0B) accent — high contrast, tech-forward aesthetic. Typography-driven rather than photography-led. LinkedIn creative uses bold statistical claims ('72% of employees don't understand their benefits') paired with clean UI screenshots.",
+          "source_url": ""
+        },
+        {
+          "label": "Strategic Gaps",
+          "text": "'AI-powered' is rapidly commoditising — every platform now claims AI. Nayya's moat is narrowing as HRIS vendors (Workday, ADP) and benefits admin platforms build native AI capabilities. The abstract value proposition ('AI between employees and their benefits') is difficult to make tangible in short-form campaign creative.",
+          "source_url": ""
+        }
+      ],
+      "matrix": {
+        "primary_model": "AI Benefits Platform",
+        "core_buyer": "HR Tech Buyer",
+        "engagement_loop": "Annual enrollment AI",
+        "gamification": "None",
+        "ai_personalisation": "Agentic AI platform",
+        "market_geography": "US only",
+        "paid_social_meta": "LinkedIn-focused",
+        "creative_maturity": "High — AI-native"
+      }
+    },
+    {
+      "id": "selerix",
+      "initials": "SX",
+      "name": "Selerix",
+      "tagline": "Enterprise-grade benefits administration — BenSelect platform",
+      "color": "#3B2FC9",
+      "bg": "#F5F3FF",
+      "founded": "2003, Texas · NexPhase Capital backed",
+      "markets": "US only · Enterprise & Complex Cases",
+      "maturity": "Low",
+      "maturityColor": "#ef4444",
+      "last_updated": "2026-03-10",
+      "watch_urls": [
+        "https://selerix.com/benselect",
+        "https://selerix.com/blog"
+      ],
+      "positioning": {
+        "text": "Selerix positions BenSelect as the most configurable benefits administration platform for complex enterprise use cases — capable of handling virtually any plan design, eligibility rule, or carrier requirement. The proposition to large employers and brokers is reliability and depth: if any other platform can't handle your configuration, Selerix can.",
+        "source_name": "Selerix Website",
+        "source_url": "https://selerix.com"
+      },
+      "key_differentiators": [
+        {
+          "text": "BenSelect — deep configurability for any plan design or eligibility rule",
+          "source_name": "Selerix Website",
+          "source_url": "https://selerix.com/benselect"
+        },
+        {
+          "text": "Benefits Genius AI assistant (launched 2024)",
+          "source_name": "Selerix Blog",
+          "source_url": ""
+        },
+        {
+          "text": "20+ years of enterprise implementation experience",
+          "source_name": "Selerix Website",
+          "source_url": ""
+        }
+      ],
+      "analyses": [
+        {
+          "label": "Core Value Proposition",
+          "text": "Selerix positions BenSelect as the most configurable benefits administration platform for complex enterprise use cases — capable of handling virtually any plan design, eligibility rule, or carrier requirement. The proposition to large employers and brokers is reliability and depth: if any other platform can't handle your configuration, Selerix can.",
+          "source_url": ""
+        },
+        {
+          "label": "Capability Framing",
+          "text": "Key marketed capabilities: BenSelect's deep configurability, the new 'Benefits Genius' AI assistant (2024), carrier-direct integration depth, and 20+ years of enterprise implementation experience. The Benefits Genius launch is a direct response to competitive pressure from AI-native platforms — but the underlying platform is still legacy architecture.",
+          "source_url": ""
+        },
+        {
+          "label": "Audience Targeting",
+          "text": "Primary: benefits brokers managing large, complex employer accounts; HR and benefits administrators at enterprise employers (1,000+ employees) with non-standard plan designs. Secondary: TPAs and carriers who white-label BenSelect for their distribution. Campaign creative is low-volume and predominantly product-screenshot-led.",
+          "source_url": ""
+        },
+        {
+          "label": "Behaviour-to-Benefit Loop",
+          "text": "Selerix has no meaningful behaviour-to-benefit connection. The platform is purely administrative — it manages enrollment and eligibility but does not create employee engagement with benefits outside of the enrollment window. No wellness, gamification, or ongoing engagement mechanism.",
+          "source_url": ""
+        },
+        {
+          "label": "Tone & Messaging",
+          "text": "Functional, reliability-focused, and enterprise-appropriate. Language centres on 'powerful,' 'flexible,' 'proven,' and 'enterprise-grade.' Tone is conservative and professional — appropriate for the target buyer but unlikely to generate organic enthusiasm or word-of-mouth.",
+          "source_url": ""
+        },
+        {
+          "label": "Campaign Creative",
+          "text": "The lowest creative maturity in the competitive set. Campaign assets are primarily product screenshots, platform UI demonstrations, and industry conference presence. No distinctive visual identity. No awareness-building campaigns. Market presence is almost entirely through direct sales, broker relationships, and conference sponsorships.",
+          "source_url": ""
+        },
+        {
+          "label": "Strategic Gaps",
+          "text": "Selerix's legacy architecture is increasingly visible as a liability in a market moving toward API-native, mobile-first platforms. The Benefits Genius AI launch signals awareness of this gap but cannot fully bridge the underlying technology debt. Low campaign creative investment leaves significant brand-building whitespace.",
+          "source_url": ""
+        }
+      ],
+      "matrix": {
+        "primary_model": "Benefits Admin Software",
+        "core_buyer": "Broker / TPA",
+        "engagement_loop": "None",
+        "gamification": "None",
+        "ai_personalisation": "Benefits Genius AI",
+        "market_geography": "US only",
+        "paid_social_meta": "None visible",
+        "creative_maturity": "Low — screenshots"
+      }
+    },
+    {
+      "id": "nava",
+      "initials": "NV",
+      "name": "Nava Benefits",
+      "tagline": "Co-pilot for benefits — tech-enabled brokerage for modern employers",
+      "color": "#6B21A8",
+      "bg": "#FAF5FF",
+      "founded": "2019, San Francisco · Raised $30M+",
+      "markets": "US only · Startups & SMBs (50–500 employees)",
+      "maturity": "Med-High",
+      "maturityColor": "#f59e0b",
+      "last_updated": "2026-03-10",
+      "watch_urls": [
+        "https://nava.com/platform",
+        "https://nava.com/blog",
+        "https://nava.com/resources"
+      ],
+      "positioning": {
+        "text": "Nava Benefits is a tech-enabled brokerage that bundles broker services, a proprietary platform (Nava HQ), and a curated modern carrier network into a single relationship. The core promise is being the 'co-pilot for benefits' — taking complexity off the plates of startup and SMB HR teams who lack benefits expertise.",
+        "source_name": "Nava Benefits Website",
+        "source_url": "https://nava.com"
+      },
+      "key_differentiators": [
+        {
+          "text": "Nava HQ — employer-facing benefits management platform + AI renewal analysis",
+          "source_name": "Nava Platform Page",
+          "source_url": "https://nava.com/platform"
+        },
+        {
+          "text": "Preferred Partnerships programme — curated modern carrier marketplace",
+          "source_name": "Nava Website",
+          "source_url": ""
+        },
+        {
+          "text": "#fixhealthcare mission-driven positioning resonates with startup/founder buyers",
+          "source_name": "Nava Blog",
+          "source_url": "https://nava.com/blog"
+        }
+      ],
+      "analyses": [
+        {
+          "label": "Core Value Proposition",
+          "text": "Nava Benefits is a tech-enabled brokerage that bundles broker services, a proprietary platform (Nava HQ), and a curated modern carrier network into a single relationship. The core promise is being the 'co-pilot for benefits' — taking complexity off the plates of startup and SMB HR teams who lack benefits expertise.",
+          "source_url": ""
+        },
+        {
+          "label": "Capability Framing",
+          "text": "Key marketed capabilities: Nava HQ (employer-facing benefits management platform), Preferred Partnerships programme (curated modern carrier and vendor marketplace), AI-powered renewal analysis, and dedicated broker support. The 'Fix Healthcare Live 2026' conference signals ambitions to become a thought-leadership brand in the benefits reform space.",
+          "source_url": ""
+        },
+        {
+          "label": "Audience Targeting",
+          "text": "Primary: CEOs, CFOs, and Heads of People at venture-backed startups and growth-stage SMBs (50–500 employees) who are experiencing benefits complexity for the first time. Campaign creative on LinkedIn uses mission-driven messaging ('#fixhealthcare') that resonates with purpose-aligned startup audiences.",
+          "source_url": ""
+        },
+        {
+          "label": "Behaviour-to-Benefit Loop",
+          "text": "Nava's behaviour-to-benefit connection is indirect — it works through better broker advice and plan selection rather than direct employee engagement. The Nava HQ platform provides visibility into benefits adoption and cost, but does not create employee-facing engagement loops.",
+          "source_url": ""
+        },
+        {
+          "label": "Tone & Messaging",
+          "text": "Mission-driven, founder-friendly, and reform-oriented. Language centres on 'fixing healthcare,' 'modern benefits,' and 'co-pilot.' Tone is warm and startup-appropriate — conversational, direct, and purpose-led. The '#fixhealthcare' campaign creates strong brand affinity among target buyers who share the reform mindset.",
+          "source_url": ""
+        },
+        {
+          "label": "Campaign Creative",
+          "text": "Medium-high creative maturity. Campaign assets use clean, modern design with strong typography and mission-forward copy. LinkedIn creative mixes thought leadership content (benefits benchmarking reports, HR guides) with event promotion (Fix Healthcare Live).",
+          "source_url": ""
+        },
+        {
+          "label": "Strategic Gaps",
+          "text": "Nava's hybrid model (broker + technology) creates a positioning tension: it is neither a pure software vendor nor a traditional broker. The Nava HQ technology platform is the strongest proprietary asset but is underexplained in top-of-funnel creative. Platform access is tied to the brokerage relationship — a structural lock-in risk that competitors can exploit.",
+          "source_url": ""
+        }
+      ],
+      "matrix": {
+        "primary_model": "Tech-Enabled Broker",
+        "core_buyer": "HR Leader / Founder",
+        "engagement_loop": "Indirect via HQ",
+        "gamification": "None",
+        "ai_personalisation": "Nava HQ renewal AI",
+        "market_geography": "US only",
+        "paid_social_meta": "LinkedIn-focused",
+        "creative_maturity": "Med-High — mission"
+      }
+    },
+    {
+      "id": "aetna",
+      "initials": "AE",
+      "name": "Aetna Wellness",
+      "tagline": "Health is a journey. Don't make it alone. — CVS Health group benefits & wellness",
+      "color": "#7B1FA2",
+      "bg": "#FDF4FF",
+      "founded": "1853, Hartford CT · CVS Health (revenue $100B+)",
+      "markets": "US dominant · Large Employers (1,000+)",
+      "maturity": "High",
+      "maturityColor": "#10b981",
+      "last_updated": "2026-03-10",
+      "watch_urls": [
+        "https://www.aetna.com/employers/wellness-programs.html",
+        "https://news.aetna.com"
+      ],
+      "positioning": {
+        "text": "Aetna Wellness positions itself as a comprehensive health partner connecting insurance coverage with personalised wellness support. The core promise is holistic: 'Quality health plans & benefits. Healthier living. Financial well-being. Intelligent solutions.' As part of CVS Health, Aetna leverages the largest retail health footprint in the US to offer integrated care that pure wellness platforms cannot match.",
+        "source_name": "Aetna Employers Page",
+        "source_url": "https://www.aetna.com/employers/wellness-programs.html"
+      },
+      "key_differentiators": [
+        {
+          "text": "CVS integration — largest retail health footprint in the US",
+          "source_name": "Aetna Website",
+          "source_url": ""
+        },
+        {
+          "text": "Aetna One Advocate — dedicated care navigation team",
+          "source_name": "Aetna Employers Page",
+          "source_url": "https://www.aetna.com/employers/wellness-programs.html"
+        },
+        {
+          "text": "CarePass tracks health goals and connects to pharmacy rewards",
+          "source_name": "Aetna Website",
+          "source_url": ""
+        }
+      ],
+      "analyses": [
+        {
+          "label": "Core Value Proposition",
+          "text": "Aetna Wellness positions itself as a comprehensive health partner connecting insurance coverage with personalised wellness support. The core promise is holistic: 'Quality health plans & benefits. Healthier living. Financial well-being. Intelligent solutions.' As part of CVS Health, Aetna leverages the largest retail health footprint in the US to offer integrated care that pure wellness platforms cannot match.",
+          "source_url": ""
+        },
+        {
+          "label": "Capability Framing",
+          "text": "Aetna frames capabilities around breadth and integration. Key marketed capabilities: Aetna One Advocate (dedicated care navigation team), CarePass health tracking, Triage app (symptom checker), Resources for Living EAP, Smart Compare (AI-powered doctor matching), and the Workplace Well-Being employer programme. CVS integration is the structural differentiator.",
+          "source_url": ""
+        },
+        {
+          "label": "Audience Targeting",
+          "text": "Dual audience: large employers (1,000+) for group health plan sales, and individual members for Medicare Advantage. The employer-facing campaign ('Let's start a healthademic') targets HR and benefits leaders with population health messaging. The member-facing campaign ('What's your healthy?') uses personalised health goal framing with emotional, human-centred imagery.",
+          "source_url": ""
+        },
+        {
+          "label": "Behaviour-to-Benefit Loop",
+          "text": "Aetna's behaviour-to-benefit connection is the most sophisticated in the competitive set, operating across multiple levels: CarePass tracks health goals and connects to pharmacy rewards; Aetna One Advocate guides members toward preventive care; Workplace Well-Being rewards employers for population health improvements.",
+          "source_url": ""
+        },
+        {
+          "label": "Tone & Messaging",
+          "text": "Warm, authoritative, and accessible — spanning from consumer-friendly ('What's your healthy?') to employer-facing professional ('Healthademic'). Tone is the most polished in the competitive set — reflecting Aetna's significant brand and creative investment. However, 'polished' can read as 'generic' — the brand lacks the distinctive personality of newer entrants.",
+          "source_url": ""
+        },
+        {
+          "label": "Campaign Creative",
+          "text": "High creative maturity but generic execution. Campaign assets use warm, diverse lifestyle photography, clean blue-and-white corporate palette, and aspirational wellness imagery. 'Healthademic' employer campaign is the most creative breakthrough — bold enough to stand out in B2B benefits marketing.",
+          "source_url": ""
+        },
+        {
+          "label": "Strategic Gaps",
+          "text": "Aetna's wellness capabilities are inseparable from its medical plan — a fundamental distribution limitation. Legacy technology and bureaucracy mean innovation cycles are measured in years. The CVS-Aetna integration is real but complex to communicate and may take years to fully materialise into a coherent consumer experience.",
+          "source_url": ""
+        }
+      ],
+      "matrix": {
+        "primary_model": "Health Insurer + Wellness",
+        "core_buyer": "HR / Benefits Leader",
+        "engagement_loop": "CarePass / Triage",
+        "gamification": "None",
+        "ai_personalisation": "Smart Compare AI",
+        "market_geography": "US (dominant)",
+        "paid_social_meta": "Active (Medicare)",
+        "creative_maturity": "High — polished/generic"
+      }
+    }
+  ]
+}
