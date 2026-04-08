@@ -1,11 +1,14 @@
 packages:
   - lib/*
+  - scripts
 
 catalog:
   drizzle-orm: "^0.39.3"
   drizzle-zod: "^0.7.1"
   zod: "^3.25.76"
   "@types/node": "20.19.27"
+  "@tanstack/react-query": "^5.60.5"
+  tsx: "^4.20.5"
 
 overrides:
   # drizzle-kit uses esbuild internally on an older version that's vulnerable, this overrides it
