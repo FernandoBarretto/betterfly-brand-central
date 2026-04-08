@@ -125,7 +125,7 @@ async function extractTrendsFromContent(
   if (!content.trim()) return [];
 
   const message = await anthropic.messages.create({
-    model: "claude-sonnet-4-6",
+    model: "claude-sonnet-4-20250514",
     max_tokens: 2048,
     messages: [
       {
@@ -171,7 +171,7 @@ async function extractCompetitorUpdates(
   if (!content.trim()) return [];
 
   const message = await anthropic.messages.create({
-    model: "claude-sonnet-4-6",
+    model: "claude-sonnet-4-20250514",
     max_tokens: 2048,
     messages: [
       {

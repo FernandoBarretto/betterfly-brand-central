@@ -534,7 +534,7 @@ export async function registerRoutes(httpServer: Server, app: Express): Promise<
       }
 
       const message = await anthropic.messages.create({
-        model: "claude-sonnet-4-6",
+        model: "claude-sonnet-4-20250514",
         max_tokens: 8192,
         system: systemPrompt,
         messages: [{ role: "user", content: userMessage }],
@@ -612,7 +612,7 @@ export async function registerRoutes(httpServer: Server, app: Express): Promise<
     try {
       const { rawText } = req.body;
       const message = await anthropic.messages.create({
-        model: "claude-sonnet-4-6",
+        model: "claude-sonnet-4-20250514",
         max_tokens: 4096,
         messages: [{
           role: "user",
@@ -812,7 +812,7 @@ Rules:
 `;
 
     const message = await anthropic.messages.create({
-      model: "claude-sonnet-4-6",
+      model: "claude-sonnet-4-20250514",
       max_tokens: 4000,
       messages: [{ role: "user", content: "Generate the Intel Digest analysis now." }],
       system: systemPrompt,
@@ -1158,7 +1158,7 @@ Rules:
       const userMessage = `Generate a ${formatLabel} for the ${audienceLabel} with this objective:\n\n"${objective}"\n\nUse only approved brand content. Return only the JSON.`;
 
       const message = await anthropic.messages.create({
-        model: "claude-sonnet-4-6",
+        model: "claude-sonnet-4-20250514",
         max_tokens: 8192,
         system: systemPrompt,
         messages: [{ role: "user", content: userMessage }],
